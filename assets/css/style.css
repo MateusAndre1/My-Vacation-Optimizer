@@ -19,7 +19,7 @@
 form {
     border: 5px solid #29b6f6;
     margin-top: 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 #formButton {
     margin-bottom: 10px;
