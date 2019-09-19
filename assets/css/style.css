@@ -4,3 +4,14 @@
 .datepicker-table td.is-selected{
     background-color: #29b6f6;
 }
+
+form {
+    border: 5px solid #29b6f6;
+    margin-top: 30px;
+}
+#formButton {
+    margin-bottom: 10px;
+}
+p {
+    margin-top: 30px;
+}
