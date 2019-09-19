@@ -4,3 +4,13 @@
 .datepicker-table td.is-selected{
     background-color: #29b6f6;
 }
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done{
+    background-color: #29b6f6;
+    color: white;
+    margin: 2px;
+
+}
+.is-today{
+    color: #29b6f6;
+}
