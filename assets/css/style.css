@@ -20,6 +20,7 @@ form {
     border: 5px solid #29b6f6;
     margin-top: 30px;
     background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
 }
 #formButton {
     margin-bottom: 10px;
@@ -31,5 +32,9 @@ p {
 html {
     background-image: url("../imgs/image1.jpg");
     background-repeat: no-repeat;
-    background-size: 110% ;
+    background-position: fixed;
+    background-size: cover ;
+}
+.input-field>label{
+    color: blue
 }

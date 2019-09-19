@@ -1,8 +1,9 @@
 //Arrays within an object that will allow the progrma to search in the selected region
 var destinations = {
-    US: ["New York City", "Chicago", "Los Angeles"],
+    usEast: ["New York City", "Orlando", "Miami", "Boston"],
+    usWest: ["Los Angeles", "Las Vegas", "San Fransisco", "Seattle", "Portland, Oregon"],
     Canada: ["Vancouver", "Ottowa", "Toronto"],
-    Mexico: ["Mexico City",]
+    Mexico: ["Mexico City", "Tijuana"]
 }
 
 //This function searches the city inputed and determines if the city meets the weather specifications
@@ -42,8 +43,29 @@ function weatherSearch(location){
             console.log(max)
             console.log(precip)
             //These are the conditionals based on what weather the user selects
+            if(max>=35){
+                var climate = "hot"
+            }
+            else if(max<35 && max>15){
+                var climate = "warm"
+            }
+            else{
+                var climate = "cold"
+            }
+            console.log(climate)
+            if(climate===$("#weatherSelect").val()){
+                let p = $("<p>")
+                p.attr("value", location+" vacation guide")
+                p.attr("id", "city-links")
+                p.text(location)
+                $("#city-results").append(p)
+            }
         })
     });
 }
-
+$("#formButton").on("click",function(){
+    event.preventDefault
+    console.log("button clicked")
+    weatherSearch("miami")
+})
 //Loop through the selected region
