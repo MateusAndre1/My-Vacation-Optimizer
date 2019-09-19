@@ -32,5 +32,9 @@ p {
 html {
     background-image: url("../imgs/image1.jpg");
     background-repeat: no-repeat;
-    background-size: 110% ;
+    background-position: fixed;
+    background-size: cover ;
+}
+.input-field>label{
+    color: blue
 }
