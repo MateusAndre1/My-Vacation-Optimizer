@@ -5,6 +5,16 @@
     background-color: #29b6f6;
 }
 
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done{
+    background-color: #29b6f6;
+    color: white;
+    margin: 2px;
+
+}
+.is-today{
+    color: #29b6f6;
+
 form {
     border: 5px solid #29b6f6;
     margin-top: 30px;
@@ -14,4 +24,5 @@ form {
 }
 p {
     margin-top: 30px;
+
 }
