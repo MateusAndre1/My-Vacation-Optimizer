@@ -1,9 +1,11 @@
+//Arrays within an object that will allow the progrma to search in the selected region
 var destinations = {
     US: ["New York City", "Chicago", "Los Angeles"],
     Canada: ["Vancouver", "Ottowa", "Toronto"],
     Mexico: ["Mexico City",]
 }
 
+//This function searches the city inputed and determines if the city meets the weather specifications
 function weatherSearch(location){
     var settings = {
 	    "async": true,
@@ -16,6 +18,7 @@ function weatherSearch(location){
 	}
     }
 
+    //This ajax call searches for the latitude and longitude of the selected city
     $.ajax(settings).then(function (result) {
         console.log(result)
         console.log(result.Results)
@@ -25,6 +28,7 @@ function weatherSearch(location){
         var long = result.Results[0].lon;
         var time = 255657600;
         var queryUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+time+"?exclude=currently,flags";
+        //This ajax call searches for the weather of the selected city
         $.ajax({
             url: queryUrl,
             method: "GET"
@@ -37,12 +41,9 @@ function weatherSearch(location){
             console.log(min)
             console.log(max)
             console.log(precip)
+            //These are the conditionals based on what weather the user selects
         })
     });
 }
-$("#formButton").on("click", function(){
-    event.preventDefault
-    var startDate = $("#start-date").val()
-    console.log(startDate)
-    var endDate = $("#end-date").val()
-})
+
+//Loop through the selected region
