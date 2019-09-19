@@ -1,18 +1,19 @@
-let api_url = "https://cors-anywhere.herokuapp.com/api.eventful.com/json/events/search?";
-let api_key = "app_key=6MpqJRCcqvBRwSn8";
-// let location;
-let event = "&keywords=sports"
+let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10";
+let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
+let input = "orlando, fl vacation";
 
-function eventful() {
-    let url = api_url + api_key + "&&location =" + "orlando" + event;
+function youtubeCall() {
+    let url = api_youtube + "&q=" + input + "&key="+ api_key;
 
     $.ajax({
         url: url,
         method: "GET"
     })
-    .then(function (response) {
+    .then(function (response){
         console.log(response);
     })
-};
 
-eventful()
+
+}
+
+youtubeCall();
