@@ -3,7 +3,7 @@ $(document).ready(function(){
 //Arrays within an object that will allow the progrma to search in the selected region
 var destinations = {
     usEast: ["New York City, New York", "Orlando, Florida", "Miami, Florida", "Boston, Massachusetts"],
-    usWest: ["Los Angeles, California", "Las Vegas, Nevada", "San Fransisco, California", "Seattle, Washington", "Portland, Oregon"],
+    usWest: ["Los Angeles, California", "Las Vegas, Nevada", "San Francisco, California", "Seattle, Washington", "Portland, Oregon"],
     Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler"],
     Mexico: ["Mexico City, Mexico", "Tijuana, Mexico"],
     France: ["Paris, France"],
@@ -27,11 +27,9 @@ function weatherSearch(location){
     $.ajax(settings).then(function (result) {
         //This is my algorithm to get the start date
         var startDate = $("#start-date").val();
-        console.log(startDate)
         var splitDate = startDate.split(" ");
         splitDate[2] = 2018;
         var unixDate = moment().unix(moment(splitDate.join(" "), "MMM-DD-YYYY"));
-        console.log(unixDate)
         //This is what I'm searching
 	    var key = "4f8a13d4f8a423a049c97f0ad49fcb8b";
         var lat = result.Results[0].lat;
@@ -45,7 +43,6 @@ function weatherSearch(location){
         }).then(function(response){
             let a = response.daily.data[0]
             let max = a.apparentTemperatureMax
-            console.log(max)
             //These are the conditionals based on what weather the user selects
             if(max>=35){
                 var climate = "Hot"
@@ -73,7 +70,7 @@ function weatherSearch(location){
 $("#formButton").on("click",function(){
     event.preventDefault
     var regionSelect = $("#region-select").val()
-
+    $("#city-results").empty()
 
     if(regionSelect==1){
         for(i=0; i<destinations.usEast.length; i++){
