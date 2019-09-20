@@ -4,13 +4,7 @@ $(document).ready(function () {
 
     let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5";
     let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
-    // this is thought process we have for getting value
-    // var val;
-    // var input = getVal();
-    // $(document).on("click", "#city-links", function getVal(){
-    //     var val = $(this).attr("value")
-    //     return val;
-    // });
+    let input = localStorage.getItem("value");
     var player = "";
     var done = false;
     var tag = document.createElement('script');
@@ -18,11 +12,6 @@ $(document).ready(function () {
     console.log("------------------------------------");
     console.log(input);
     console.log("------------------------------------");
-
-    // function inputCall () {
-        // let input = $(this).attr("data-name");
-        // return input;
-    // }
 
     // load a google interactive map with tour guides in the location
 
@@ -117,10 +106,7 @@ $(document).ready(function () {
     appCalls();
 
     $("#player").on("click", youtubeOnClick);
-    // $("#city-links").click(function(){
-    //     $("#w3s").attr("href", function(i, origValue){
-    //       return origValue + "/jquery/";
-    //     });
+    
       
 
 });
