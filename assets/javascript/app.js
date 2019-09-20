@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 //Arrays within an object that will allow the progrma to search in the selected region
 var destinations = {
-    usEast: ["New York City", "Orlando", "Miami", "Boston"],
-    usWest: ["Los Angeles", "Las Vegas", "San Fransisco", "Seattle", "Portland, Oregon"],
-    Canada: ["Vancouver", "Ottowa", "Toronto"],
-    Mexico: ["Mexico City", "Tijuana"],
-    France: ["Paris"],
+    usEast: ["New York City, New York", "Orlando, Florida", "Miami, Florida", "Boston, Massachusetts"],
+    usWest: ["Los Angeles, California", "Las Vegas, Nevada", "San Fransisco, California", "Seattle, Washington", "Portland, Oregon"],
+    Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler"],
+    Mexico: ["Mexico City, Mexico", "Tijuana, Mexico"],
+    France: ["Paris, France"],
     Spain: ["Madrid", "Barcelona"]
 }
 
@@ -20,26 +20,30 @@ function weatherSearch(location){
 	    "headers": {
 	    "x-rapidapi-host": "devru-latitude-longitude-find-v1.p.rapidapi.com",
 	    "x-rapidapi-key": "53d40f2e3fmsh12a20b5f666e560p1b6da5jsn38ffe068fabc"
-	}
+	    }
     }
 
     //This ajax call searches for the latitude and longitude of the selected city
     $.ajax(settings).then(function (result) {
-        console.log(result)
-        console.log(result.Results)
-        console.log(result.Results[0])
+        //This is my algorithm to get the start date
+        var startDate = $("#start-date").val();
+        console.log(startDate)
+        var splitDate = startDate.split(" ");
+        splitDate[2] = 2018;
+        var unixDate = moment().unix(moment(splitDate.join(" "), "MMM-DD-YYYY"));
+        console.log(unixDate)
+        //This is what I'm searching
 	    var key = "4f8a13d4f8a423a049c97f0ad49fcb8b";
         var lat = result.Results[0].lat;
         var long = result.Results[0].lon;
-        var time = 255657600;
-        var queryUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+time+"?exclude=currently,flags";
+        //var queryUrl = "https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+unixDate+"?exclude=currently,flags";
+        var queryUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+unixDate+"?exclude=currently,flags";
         //This ajax call searches for the weather of the selected city
         $.ajax({
             url: queryUrl,
             method: "GET"
         }).then(function(response){
             let a = response.daily.data[0]
-            console.log(a)
             let max = a.apparentTemperatureMax
             console.log(max)
             //These are the conditionals based on what weather the user selects
@@ -69,7 +73,8 @@ function weatherSearch(location){
 $("#formButton").on("click",function(){
     event.preventDefault
     var regionSelect = $("#region-select").val()
-    console.log(regionSelect)
+
+
     if(regionSelect==1){
         for(i=0; i<destinations.usEast.length; i++){
             weatherSearch(destinations.usEast[i])
@@ -99,7 +104,7 @@ $("#formButton").on("click",function(){
         for(i=0; i<destinations.France.length; i++){
             weatherSearch(destinations.France[i])
         }
-    }
+    }    
 
 })
 
