@@ -14,7 +14,7 @@ $(document).ready(function () {
     function loadMap() {
         $(".tourmap").empty();
         var mapview = ` 
-        <iframe class="info-map" width="960" height="600" frameborder="0" style="border:0"
+        <iframe class="info-map" width="100%" height="600" frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/search?q=${input}&key=AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4"
         allowfullscreen></iframe>
         `;
@@ -36,7 +36,7 @@ $(document).ready(function () {
         console.log("In the function", itemsid)
         player = new YT.Player('player', {
             height: '585',
-            width: '960',
+            width: '100%',
             videoId: itemsid,
             events: {
                 'onReady': onPlayerReady,
