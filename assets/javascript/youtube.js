@@ -4,15 +4,31 @@ $(document).ready(function () {
 
     let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5";
     let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
-    let input = "hawaii vacation tour guide";
+    // this is thought process we have for getting value
+    // var val;
+    // var input = getVal();
+    // $(document).on("click", "#city-links", function getVal(){
+    //     var val = $(this).attr("value")
+    //     return val;
+    // });
     var player = "";
     var done = false;
     var tag = document.createElement('script');
+
+    console.log("------------------------------------");
+    console.log(input);
+    console.log("------------------------------------");
+
+    // function inputCall () {
+        // let input = $(this).attr("data-name");
+        // return input;
+    // }
 
     // load a google interactive map with tour guides in the location
 
     function loadMap() {
         $(".tourmap").empty();
+        
         var mapview = ` 
         <iframe class="info-map" width="100%" height="600" frameborder="0" style="border:0"
         src="https://www.google.com/maps/embed/v1/search?q=${input}&key=AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4"
@@ -85,6 +101,7 @@ $(document).ready(function () {
             .then(function (response) {
                 let itemsid = response.items[0].id.videoId;
                 console.log("In promise", itemsid);
+               
                 videoLoad(itemsid);
             })
     }
@@ -100,5 +117,10 @@ $(document).ready(function () {
     appCalls();
 
     $("#player").on("click", youtubeOnClick);
+    // $("#city-links").click(function(){
+    //     $("#w3s").attr("href", function(i, origValue){
+    //       return origValue + "/jquery/";
+    //     });
+      
 
 });
