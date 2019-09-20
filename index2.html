@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,20 +27,27 @@
             </ul>
         </div>
     </nav>
-<div class="container">
-<div id="player">CLICK ON ME</div>
-</div>
+    <div class="container" style="text-align: center">
+        <div class="tourmap"></div>
+    </div>
+
+    <div class="container player2" style="text-align: center">
+        <div id="player">CLICK ON ME</div>
+    </div>
     <script>
         $(document).ready(function () {
-            $('.datepicker').datepicker({Format: 'yyyy-mm-dd'});
-           
-            
+            $('.datepicker').datepicker({
+                Format: 'yyyy-mm-dd'
+            });
+
+
         });
         // Or with jQuery
 
         $(document).ready(function () {
             $('select').formSelect();
-        });</script>
+        });
+    </script>
 
 
 
@@ -51,4 +59,5 @@
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/youtube.js"></script>
 </body>
+
 </html>

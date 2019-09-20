@@ -36,5 +36,15 @@ html {
     background-size: cover ;
 }
 .input-field>label{
-    color: blue
+    color: blue;
+}
+
+.info-map {
+    border-radius: .5em;
+}
+
+.player2 {
+    border: 1px solid red;
+    height: 595px;
+    width: 965px;
 }
