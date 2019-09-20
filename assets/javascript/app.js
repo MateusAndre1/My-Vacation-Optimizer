@@ -1,9 +1,13 @@
+$(document).ready(function(){
+
 //Arrays within an object that will allow the progrma to search in the selected region
 var destinations = {
     usEast: ["New York City", "Orlando", "Miami", "Boston"],
     usWest: ["Los Angeles", "Las Vegas", "San Fransisco", "Seattle", "Portland, Oregon"],
     Canada: ["Vancouver", "Ottowa", "Toronto"],
-    Mexico: ["Mexico City", "Tijuana"]
+    Mexico: ["Mexico City", "Tijuana"],
+    France: ["Paris"],
+    Spain: ["Madrid", "Barcelona"]
 }
 
 //This function searches the city inputed and determines if the city meets the weather specifications
@@ -36,24 +40,20 @@ function weatherSearch(location){
         }).then(function(response){
             let a = response.daily.data[0]
             console.log(a)
-            let min = a.apparentTemperatureMin
             let max = a.apparentTemperatureMax
-            let precip = a.precipType
-            console.log(min)
             console.log(max)
-            console.log(precip)
             //These are the conditionals based on what weather the user selects
             if(max>=35){
-                var climate = "hot"
+                var climate = "Hot"
             }
             else if(max<35 && max>15){
-                var climate = "warm"
+                var climate = "Warm"
             }
             else{
-                var climate = "cold"
+                var climate = "Cold"
             }
-            console.log(climate)
-            if(climate===$("#weatherSelect").val()){
+            //This is where we append the cities
+            if(climate==$("#weatherSelect").val()){
                 let p = $("<p>")
                 p.attr("value", location+" vacation guide")
                 p.attr("id", "city-links")
@@ -63,9 +63,52 @@ function weatherSearch(location){
         })
     });
 }
+
+
+//When they click on the button, have the weatherSearch function search the selected region
 $("#formButton").on("click",function(){
     event.preventDefault
-    console.log("button clicked")
-    weatherSearch("miami")
+    var regionSelect = $("#region-select").val()
+    console.log(regionSelect)
+    if(regionSelect==1){
+        for(i=0; i<destinations.usEast.length; i++){
+            weatherSearch(destinations.usEast[i])
+        }
+    }
+    else if(regionSelect==2){
+        for(i=0; i<destinations.usWest.length; i++){
+            weatherSearch(destinations.usWest[i])
+        }
+    }
+    else if(regionSelect==3){
+        for(i=0; i<destinations.Canada.length; i++){
+            weatherSearch(destinations.Canada[i])
+        }
+    }
+    else if(regionSelect==4){
+        for(i=0; i<destinations.Mexico.length; i++){
+            weatherSearch(destinations.usWest[i])
+        }
+    }
+    else if(regionSelect==5){
+        for(i=0; i<destinations.Spain.length; i++){
+            weatherSearch(destinations.Spain[i])
+        }
+    }
+    else if(regionSelect==6){
+        for(i=0; i<destinations.France.length; i++){
+            weatherSearch(destinations.France[i])
+        }
+    }
+
 })
-//Loop through the selected region
+
+
+//Create an on-click for the results. Save the value of the result clicked as a variable
+$("document").on("click", "#city-links", function(){
+
+})
+
+
+
+})
