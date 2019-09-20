@@ -12,6 +12,14 @@
     margin: 2px;
 
 }
+.nav-wrapper {
+    background-image: url(../imgs/banner.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
 .is-today{
     color: #29b6f6;
 }
