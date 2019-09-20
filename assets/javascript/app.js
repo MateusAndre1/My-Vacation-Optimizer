@@ -54,11 +54,12 @@ function weatherSearch(location){
             }
             //This is where we append the cities
             if(climate==$("#weatherSelect").val()){
-                let p = $("<p>")
-                p.attr("value", location+" vacation guide")
-                p.attr("id", "city-links")
-                p.text(location)
-                $("#city-results").append(p)
+                let a = $("<a>")
+                a.attr("href", "index2.html")
+                a.attr("value", location + " vacation tour guide")
+                a.attr("id", "city-links")
+                a.text(location)
+                $("#city-results").append(a)
             }
         })
     });
@@ -67,7 +68,7 @@ function weatherSearch(location){
 
 //When they click on the button, have the weatherSearch function search the selected region
 $("#formButton").on("click",function(){
-    event.preventDefault
+    event.preventDefault();
     var regionSelect = $("#region-select").val()
     console.log(regionSelect)
     if(regionSelect==1){
