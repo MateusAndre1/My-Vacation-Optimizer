@@ -61,17 +61,19 @@ function weatherSearch(location){
                 a.attr("id", "city-links");
                 a.text(location);
                 $("#city-results").append(a);
-                localStorage.setItem("value", location + " vacation tour guide");
+
             }
             
         })
+        
     });
 }
 
 
 //When they click on the button, have the weatherSearch function search the selected region
-$("#formButton").on("click",function(){
+$("#formButton").on("click",function(event){
     event.preventDefault();
+    
     var regionSelect = $("#region-select").val()
     $("#city-results").empty()
 
@@ -110,8 +112,9 @@ $("#formButton").on("click",function(){
 
 
 //Create an on-click for the results. Save the value of the result clicked as a variable
-$("document").on("click", "#city-links", function(){
-
+$(document).on("click", "#city-links", function(){
+    const value = $(this).attr("value");
+    localStorage.setItem("value", value);
 })
 
 
