@@ -29,11 +29,16 @@ p {
     margin-top: 30px;
 
 }
-html {
-    background-image: url("../imgs/image1.jpg");
+.page1 {
+    background-color: #29b6f6;
+    background-image: url("../imgs/bg.gif");
     background-repeat: no-repeat;
-    background-position: fixed;
-    background-size: cover ;
+    background-position: center;
+    background-size: auto 100%;
+    background-attachment: fixed;
+}
+.page2 {
+    background-color: black;
 }
 .input-field>label{
     color: blue;
@@ -44,7 +49,9 @@ html {
 }
 
 .player2 {
+    color: white;
+    font-size: 40px;
     border: 1px solid red;
     height: 595px;
-    width: 965px;
+    width: 100%;
 }
