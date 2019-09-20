@@ -4,10 +4,12 @@ $(document).ready(function () {
 
     let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5";
     let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
-    let input = "jamaica vacation tour guide";
+    let input = "hawaii vacation tour guide";
     var player = "";
     var done = false;
     var tag = document.createElement('script');
+
+    // load a google interactive map with tour guides in the location
 
     function loadMap() {
         $(".tourmap").empty();
@@ -19,10 +21,6 @@ $(document).ready(function () {
         // console.log(mapview)
         $(".tourmap").append(mapview);
     }
-
-    loadMap();
-
-
 
     // This code loads the IFrame Player API code asynchronously.
 
@@ -67,14 +65,13 @@ $(document).ready(function () {
         player.stopVideo();
     }
 
-    //
+    // Creates the template on the page
 
-    function videoArr(itemsid) {
+    function videoLoad(itemsid) {
         $("#player").empty();
         const videoTemplate = youtubeTemplate(itemsid);
         $("#player").append(videoTemplate);
     }
-
 
     // call youtube API to retrieve data
 
@@ -86,15 +83,21 @@ $(document).ready(function () {
                 method: "GET"
             })
             .then(function (response) {
-                let itemsid = response.items[0].videoId;
+                let itemsid = response.items[0].id.videoId;
                 console.log("In promise", itemsid);
-                videoArr(itemsid);
+                videoLoad(itemsid);
             })
     }
 
     function youtubeOnClick() {
         youtubeCall();
     }
+
+    function appCalls() {
+        loadMap();
+    }
+
+    appCalls();
 
     $("#player").on("click", youtubeOnClick);
 
