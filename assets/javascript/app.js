@@ -62,6 +62,7 @@ function weatherSearch(location){
                 a.text(location)
                 $("#city-results").append(a)
             }
+            localStorage.setItem("value", location + " vacation tour guide");
         })
     });
 }
