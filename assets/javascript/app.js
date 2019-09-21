@@ -45,32 +45,35 @@ function weatherSearch(location){
             let max = a.apparentTemperatureMax
             //These are the conditionals based on what weather the user selects
             if(max>=35){
-                var climate = "Hot"
+                var climate = "Hot";
             }
             else if(max<35 && max>15){
-                var climate = "Warm"
+                var climate = "Warm";
             }
             else{
-                var climate = "Cold"
+                var climate = "Cold";
             }
             //This is where we append the cities
             if(climate==$("#weatherSelect").val()){
-                let a = $("<a>")
-                a.attr("href", "index2.html")
-                a.attr("value", location + " vacation tour guide")
-                a.attr("id", "city-links")
-                a.text(location)
-                $("#city-results").append(a)
+                let a = $("<a>");
+                a.attr("href", "index2.html");
+                a.attr("value", location + " vacation tour guide");
+                a.attr("id", "city-links");
+                a.text(location);
+                $("#city-results").append(a);
+
             }
-            localStorage.setItem("value", location + " vacation tour guide");
+            
         })
+        
     });
 }
 
 
 //When they click on the button, have the weatherSearch function search the selected region
-$("#formButton").on("click",function(){
+$("#formButton").on("click",function(event){
     event.preventDefault();
+    
     var regionSelect = $("#region-select").val()
     $("#city-results").empty()
 
@@ -109,8 +112,9 @@ $("#formButton").on("click",function(){
 
 
 //Create an on-click for the results. Save the value of the result clicked as a variable
-$("document").on("click", "#city-links", function(){
-
+$(document).on("click", "#city-links", function(){
+    const value = $(this).attr("value");
+    localStorage.setItem("value", value);
 })
 
 

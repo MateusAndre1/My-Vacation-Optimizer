@@ -101,6 +101,7 @@ $(document).ready(function () {
 
     function appCalls() {
         loadMap();
+        // localStorage.clear();
     }
 
     appCalls();
