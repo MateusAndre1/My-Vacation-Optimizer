@@ -56,11 +56,13 @@ function weatherSearch(location){
             //This is where we append the cities
             if(climate==$("#weatherSelect").val()){
                 let a = $("<a>")
+                let p = $("<p>")
                 a.attr("href", "index2.html")
                 a.attr("value", location + " vacation tour guide")
                 a.attr("id", "city-links")
                 a.text(location)
-                $("#city-results").append(a)
+                p.append(a)
+                $("#city-results").append(p)
             }
             localStorage.setItem("value", location + " vacation tour guide");
         })
@@ -104,12 +106,6 @@ $("#formButton").on("click",function(){
             weatherSearch(destinations.France[i])
         }
     }    
-
-})
-
-
-//Create an on-click for the results. Save the value of the result clicked as a variable
-$("document").on("click", "#city-links", function(){
 
 })
 
