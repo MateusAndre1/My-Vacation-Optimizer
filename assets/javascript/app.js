@@ -55,12 +55,15 @@ function weatherSearch(location){
             }
             //This is where we append the cities
             if(climate==$("#weatherSelect").val()){
-                let a = $("<a>");
-                a.attr("href", "index2.html");
-                a.attr("value", location + " vacation tour guide");
-                a.attr("id", "city-links");
-                a.text(location);
-                $("#city-results").append(a);
+
+                let a = $("<a>")
+                let p = $("<p>")
+                a.attr("href", "index2.html")
+                a.attr("value", location + " vacation tour guide")
+                a.attr("id", "city-links")
+                a.text(location)
+                p.append(a)
+                $("#city-results").append(p)
 
             }
             
@@ -116,6 +119,7 @@ $(document).on("click", "#city-links", function(){
     const value = $(this).attr("value");
     localStorage.setItem("value", value);
 })
+
 
 
 
