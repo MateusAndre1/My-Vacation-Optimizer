@@ -95,18 +95,12 @@ $(document).ready(function () {
             })
     }
 
-    function youtubeOnClick() {
+    function appCalls() {
+        loadMap();
         youtubeCall();
     }
 
-    function appCalls() {
-        loadMap();
-        // localStorage.clear();
-    }
-
     appCalls();
-
-    $("#player").on("click", youtubeOnClick);
     
       
 

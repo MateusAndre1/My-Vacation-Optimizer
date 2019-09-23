@@ -168,7 +168,7 @@ $(document).ready(function () {
         loadMap1();
         loadMap2();
         loadMap3();
-        // youtubeCall();
+        youtubeCall();
     }
     calls();
 });
