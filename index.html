@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-
 </head>
 
 <body class="page1">
@@ -24,139 +21,167 @@
             <li>
                 <img src="assets/imgs/image1.jpg"> <!-- random image -->
                 <div class="caption left-align">
-                    <h3><span> <i class="fas fa-globe-americas"></i> </span>My Vacation Optimizer!</h3>
-
+                    <h3>
+                        <span><i class="fas fa-globe-americas"></i></span>
+                        My Vacation Optimizer!
+                    </h3>
                 </div>
             </li>
             <li>
                 <img src="assets/imgs/snow.jfif"> <!-- random image -->
                 <div class="caption center-align">
-                    <h3>Where do you want to go?</h3>
-
+                    <h3>
+                        Where do you want to go?
+                    </h3>
                 </div>
             </li>
             <li>
                 <img src="assets/imgs/Whistler Homepage Photo Image Promotion 3.jpg"> <!-- random image -->
                 <div class="caption right-align">
-                    <h3>We've got the right guide for you!</h3>
-
+                    <h3>
+                        We've got the right guide for you!
+                    </h3>
                 </div>
             </li>
             <li>
                 <img src="assets/imgs/mild.webp"> <!-- random image -->
                 <div class="caption center-align">
-                    <h3>Dont forget to jot down your favorites!</h3>
-
+                    <h3>
+                        Dont forget to jot down your favorites!
+                    </h3>
                 </div>
             </li>
             <li>
                 <img src="assets/imgs/santa.jpg"> <!-- random image -->
                 <div class="caption left-align">
-                    <h3>Where are you gonna sleep?</h3>
-
+                    <h3>
+                        Where are you gonna sleep?
+                    </h3>
                 </div>
             </li>
         </ul>
     </div>
     <div class="container" style="text-align: center">
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem sed laboriosam reprehenderit
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem sed laboriosam reprehenderit
             exercitationem porro laudantium, iure blanditiis possimus aut perspiciatis rerum sunt quos maiores. Nisi
             praesentium quidem excepturi repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A ut
             corrupti soluta expedita, quibusdam, officia at, recusandae amet laborum quod impedit. Quos ratione enim
-            necessitatibus nostrum sunt, ex amet exercitationem.</p>
-
+            necessitatibus nostrum sunt, ex amet exercitationem.
+        </p>
         <div class="row">
-            <div class="col s3"></div>
+            <div class="col s3">
+
+            </div>
             <form class="col s6">
                 <div class="row">
                     <div class="input-field col s7">
                         <!-- <textarea id="textarea1" class="materialize-textarea"></textarea> -->
                         <input type="text" class="datepicker" id="start-date">
-                        <label for="textarea1">Vacation Start Date: (YYYY/MM/DD)</label>
+                        <label for="textarea1">
+                            Vacation Start Date: (YYYY/MM/DD)
+                        </label>
                     </div>
-
-
                 </div>
-
                 <div class="input-field col s10">
                     <select id="weatherSelect">
-                        <option value="" disabled selected>Weather Conditions</option>
-
-                        <option value="Hot">Hot</option>
-                        <option value="Mild">Mild</option>
-                        <option value="Cold">Cold</option>
-
+                        <option value="" disabled selected>
+                            Weather Conditions
+                        </option>
+                        <option value="Hot">
+                            Hot
+                        </option>
+                        <option value="Mild">
+                            Mild
+                        </option>
+                        <option value="Cold">
+                            Cold
+                        </option>
                     </select>
-                    <label>Weather</label>
+                    <label>
+                        Weather
+                    </label>
                 </div>
                 <div class="input-field col s10">
                     <select id="region-select">
-                        <option value="" disabled selected>Location/Country</option>
-                        <option value="1">United States East Coast</option>
-                        <option value="2">United States West Coast</option>
-                        <option value="3">Canada</option>
-                        <option value="4">Mexico</option>
-                        <option value="5">Spain</option>
-                        <option value="6">France</option>
+                        <option value="" disabled selected>
+                            Location/Country
+                        </option>
+                        <option value="1">
+                            United States East Coast
+                        </option>
+                        <option value="2">
+                            United States West Coast
+                        </option>
+                        <option value="3">
+                            Canada
+                        </option>
+                        <option value="4">
+                            Mexico
+                        </option>
+                        <option value="5">
+                            Spain
+                        </option>
+                        <option value="6">
+                            France
+                        </option>
                     </select>
-                    <label>Destination</label>
+                    <label>
+                        Destination
+                    </label>
                 </div>
                 <button class="btn waves-effect #29b6f6 light-blue lighten-1" type="button" name="action"
-                    id="formButton">Submit
+                    id="formButton">
+                    Submit
                     <i class="fas fa-check"></i>
                 </button>
             </form>
-            <div class="col s3"></div>
+            <div class="col s3">
+
+            </div>
         </div>
         <div class="row">
-            <div class="col s4"></div>
-            <div id="city-results" class="col s4"></div>
-            <div class="col s4"></div>
+            <div class="col s4">
+
+            </div>
+            <div id="city-results" class="col s4">
+
+            </div>
+            <div class="col s4">
+
+            </div>
         </div>
     </div>
+
     <footer class="page-footer">
-        
         <div class="footer-copyright">
             <div class="container">
                 © 2014 Copyright Text
-                
             </div>
         </div>
     </footer>
 
-
-
-
     <script>
         $(document).ready(function () {
-            $('.datepicker').datepicker({ Format: 'yyyy-mm-dd' });
-
-
+            $('.datepicker').datepicker({
+                Format: 'yyyy-mm-dd'
+            });
         });
+        
         $(document).ready(function () {
             $('.slider').slider();
         });
+
         // Or with jQuery
 
         $(document).ready(function () {
             $('select').formSelect();
-        });</script>
-
-
-
+        });
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
     <script src="assets/javascript/app.js"></script>
-
-
-
     <script src="assets/javascript/youtube.js"></script>
-
-
 
 </body>
 

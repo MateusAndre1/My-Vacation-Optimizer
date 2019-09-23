@@ -57,6 +57,8 @@ $(document).ready(function () {
     let restaurants = localStorage.getItem("value") + "best restaurants";
     let top10 = localStorage.getItem("value") + "top 10 things to do";
 
+    // load each individual map
+
     function loadMap1() {
         $(".hotel-map").empty();
         
@@ -80,6 +82,7 @@ $(document).ready(function () {
         // console.log(mapview)
         $(".activities-map").append(mapview);
     }
+
     function loadMap3() {
         $(".restaurants-map").empty();
         
@@ -109,8 +112,6 @@ $(document).ready(function () {
             })
        
     }
-
-    
 
     // This code loads the IFrame Player API code asynchronously.
 
@@ -163,12 +164,14 @@ $(document).ready(function () {
         $(".activities-video").append(videoTemplate);
     }
 
+    // call functions in order
+
     function calls(){
 
+        youtubeCall(); // load first, has biggest ms latency
         loadMap1();
         loadMap2();
         loadMap3();
-        youtubeCall();
     }
     calls();
 });
