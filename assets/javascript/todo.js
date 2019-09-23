@@ -37,8 +37,7 @@ $(document).ready(function () {
         let listName = snapshot.val().dbtodo;
 
         let tr = $("<tr>");
-        tr.append("<span><i class='far fa-trash-alt'></i>  ")
-;
+        
         tr.append(listName)
 
     $("#displayboard").append(tr)
@@ -46,12 +45,6 @@ $(document).ready(function () {
     });
 });
 
-$('tbody').on("click", "span", function (e) {
-    $(this).parent().fadeOut( function () {
-        $(this).remove();
-    });
-    e.stopPropagation();
-});
 $("tbody").on("click", "tr", function () {
     $(this).toggleClass("completed")
 });
