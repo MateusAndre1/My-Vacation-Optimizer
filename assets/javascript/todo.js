@@ -185,5 +185,5 @@ $("tbody").on("click", "tr", function () {
         loadMap3();
     }
     calls();
-});
+
 
