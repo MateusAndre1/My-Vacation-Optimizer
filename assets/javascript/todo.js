@@ -37,7 +37,7 @@ $(document).ready(function () {
         let listName = snapshot.val().dbtodo;
 
         let tr = $("<tr>");
-        
+
         tr.append(listName)
 
     $("#displayboard").append(tr)
@@ -52,7 +52,7 @@ $("tbody").on("click", "tr", function () {
     // global variables for everything below
     
     let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5";
-    let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
+    let api_key = "AIzaSyCbe0-7OsepLY88Fig1jKT6pfZuXiL2FAo";
     var player = "";
     var done = false;
     var tag = document.createElement('script');

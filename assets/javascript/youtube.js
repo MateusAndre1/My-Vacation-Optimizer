@@ -3,7 +3,7 @@ $(document).ready(function () {
     // global variables
 
     let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5";
-    let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
+    let api_key = "AIzaSyCbe0-7OsepLY88Fig1jKT6pfZuXiL2FAo";
     let input = localStorage.getItem("value") + " vacation tour guide";
     var player = "";
     var done = false;
