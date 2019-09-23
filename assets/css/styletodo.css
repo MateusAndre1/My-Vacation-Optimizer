@@ -1,5 +1,15 @@
-body {
-    background-image: url(../imgs/bgtodo.jpg);
+html {
+    scroll-behavior: smooth;
+}
+#page2 {
+    background-image: url(../imgs/mountainocean.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#page3 {
+    background-image: url(../imgs/snowmountain.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

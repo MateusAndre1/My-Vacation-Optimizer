@@ -37,7 +37,7 @@ html {
 form {
     border: 5px solid #29b6f6;
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.746);
     border-radius: 15px;
 }
 #formButton {
@@ -49,14 +49,11 @@ p {
 }
 .page1 {
     background-color: #29b6f6;
-    background-image: url("../imgs/bg.gif");
+    background-image: url("../imgs/cottagesbeach.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: fixed;
-}
-.page2 {
-    background-color: black;
 }
 .input-field>label{
     color: blue;
@@ -82,10 +79,13 @@ p {
 } */
 #city-results {
     border: 5px solid #29b6f6;
-    
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.746);
     border-radius: 15px;
 
+}
+#city-links {
+    font-size: 21px;
+    font-weight: bold;
 }
 .page-footer{
     background-color: #29b6f6;

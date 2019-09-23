@@ -96,8 +96,8 @@ $(document).ready(function () {
     }
 
     function appCalls() {
-        loadMap();
-        youtubeCall();
+        youtubeCall(); // load first, has biggest ms latency
+        loadMap();        
     }
 
     appCalls();
