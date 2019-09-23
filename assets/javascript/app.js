@@ -4,7 +4,7 @@ $(document).ready(function(){
 var destinations = {
     usEast: ["New York City, New York", "Orlando, Florida", "Miami, Florida", "Boston, Massachusetts"],
     usWest: ["Los Angeles, California", "Las Vegas, Nevada", "San Francisco, California", "Seattle, Washington", "Portland, Oregon"],
-    Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler"],
+    Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler, Canada"],
     Mexico: ["Mexico City, Mexico", "Tijuana, Mexico"],
     France: ["Paris, France"],
     Spain: ["Madrid", "Barcelona"]
@@ -29,11 +29,13 @@ function weatherSearch(location){
         var startDate = $("#start-date").val();
         var splitDate = startDate.split(" ");
         splitDate[2] = 2018;
-        var unixDate = moment().unix(moment(splitDate.join(" "), "MMM-DD-YYYY"));
+        var unixDate = moment(splitDate.join(" "), "MMM-DD-YYYY").unix();
+        console.log(unixDate)
         //This is what I'm searching
 	    var key = "4f8a13d4f8a423a049c97f0ad49fcb8b";
         var lat = result.Results[0].lat;
         var long = result.Results[0].lon;
+        console.log(unixDate)
         //var queryUrl = "https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+unixDate+"?exclude=currently,flags";
         var queryUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+unixDate+"?exclude=currently,flags";
         //This ajax call searches for the weather of the selected city
@@ -42,6 +44,7 @@ function weatherSearch(location){
             method: "GET"
         }).then(function(response){
             let a = response.daily.data[0]
+            console.log(location)
             let max = a.apparentTemperatureMax
             // console.log(max)
             //These are the conditionals based on what weather the user selects
