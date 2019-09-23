@@ -43,12 +43,16 @@ function weatherSearch(location){
         }).then(function(response){
             let a = response.daily.data[0]
             let max = a.apparentTemperatureMax
+            console.log(max)
             //These are the conditionals based on what weather the user selects
-            if(max>=35){
+            if(max>=85){
                 var climate = "Hot";
             }
-            else if(max<35 && max>15){
+            else if(max<85 && max>=65){
                 var climate = "Warm";
+            }
+            else if(max<65 && max>45){
+                var climate = "Cool"
             }
             else{
                 var climate = "Cold";
@@ -97,7 +101,7 @@ $("#formButton").on("click",function(event){
     }
     else if(regionSelect==4){
         for(i=0; i<destinations.Mexico.length; i++){
-            weatherSearch(destinations.usWest[i])
+            weatherSearch(destinations.Mexico[i])
         }
     }
     else if(regionSelect==5){
