@@ -59,7 +59,7 @@ function weatherSearch(location){
                 let a = $("<a>")
                 let p = $("<p>")
                 a.attr("href", "index2.html")
-                a.attr("value", location + " vacation tour guide")
+                a.attr("value", location)
                 a.attr("id", "city-links")
                 a.text(location)
                 p.append(a)

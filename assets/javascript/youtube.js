@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     let api_youtube = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5";
     let api_key = "AIzaSyCPJNHeGp_0ek10gfrLP0jcJEEA7yELeZ4";
-    let input = localStorage.getItem("value");
+    let input = localStorage.getItem("value") + " vacation tour guide";
     var player = "";
     var done = false;
     var tag = document.createElement('script');
