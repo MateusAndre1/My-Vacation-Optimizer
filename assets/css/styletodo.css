@@ -1,5 +1,15 @@
-body {
-    background-image: url(../imgs/bgtodo.jpg);
+html {
+    scroll-behavior: smooth;
+}
+#page2 {
+    background-image: url(../imgs/mountainocean.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#page3 {
+    background-image: url(../imgs/snowmountain.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -10,19 +20,78 @@ body {
     background-image: url(../imgs/banner.jpg);
     background-size: 100% 100%;
 }
+
 .headcontainer {
+    color: white;
     background-color: rgba(25, 119, 17, 0.787);
     border: 1px solid grey;
-    border-radius: .5em;
-}
-.bodycontainer {
-    background-color: rgba(255, 255, 255, 0.835);  
-    border: 1px solid grey;
-    border-radius: .5em; 
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
 }
 
-.page-footer{
+.bodycontainer {
+    background-color: rgba(255, 255, 255, 0.835);
+    border: 1px solid grey;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+
+}
+
+.page-footer {
     background-color: #29b6f6;
     text-align: center;
     margin-top: 200px;
+}
+
+
+span {
+    background-color: #29b6f6;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0px;
+    display: inline-block;
+    opacity: 0;
+   
+
+}
+
+tr:hover span {
+    width: 40px;
+    transition: 0.2s linear;
+    opacity: 1.0;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+
+}
+
+tr {
+
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size: 18px;
+    text-transform: uppercase;
+
+
+}
+
+.titles {
+    color: white;
+    font-size: 24px;
+    background-color: rgba(29, 140, 214, 0.883);
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+.titles2 {
+    color: white;
+    font-size: 24px;
+    height: 45px;
+    background-color: rgba(29, 140, 214, 0.883);
+    border-radius: .5em;
 }

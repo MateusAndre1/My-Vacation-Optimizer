@@ -63,7 +63,7 @@ function weatherSearch(location){
                 let a = $("<a>")
                 let p = $("<p>")
                 a.attr("href", "index2.html")
-                a.attr("value", location + " vacation tour guide")
+                a.attr("value", location)
                 a.attr("id", "city-links")
                 a.text(location)
                 p.append(a)
@@ -117,6 +117,11 @@ $("#formButton").on("click",function(event){
 
 })
 
+// $('.slider').slider({ 
+//     full_width: true,
+//     height : 1000, // default - height : 400
+//     interval: 6000 // default - interval: 6000
+// });
 
 //Create an on-click for the results. Save the value of the result clicked as a variable
 $(document).on("click", "#city-links", function(){

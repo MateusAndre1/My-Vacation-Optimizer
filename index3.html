@@ -10,27 +10,32 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styletodo.css">
-
-
-
 </head>
 
-<body>
-    <div class="container jumbotron text-center mx-auto mb-3">
-        <h1 class="text-white">My Vacation Optimizer: To Do List</h1>
+<body id="page3">
+    <div class="container jumbotron text-center mx-auto mb-3" id="top-element">
+        <h1 class="text-white">
+            <span><i class="fas fa-globe-americas"></i>
+                My Vacation Optimizer: To Do List
+        </h1>
     </div>
     <div class="container headcontainer">
-        <h4>My To Do List</h4>
+        <h4>
+            Vacation Planning Notes
+        </h4>
     </div>
     <div class="container bodycontainer mb-3">
         <table class="table table-striped">
+
             <thead>
                 <tr>
-                    <th class="thheader" scope="col">Dont forget sunscreen!</th>
+                    <th class="thheader" scope="col">
+                        Dont forget sunscreen!
+                    </th>
                 </tr>
             </thead>
             <tbody id="displayboard">
@@ -38,37 +43,84 @@
         </table>
     </div>
     <div class="container headcontainer">
-        <h4>Enter Items To Do </h4>
+        <h4>
+            Enter Items To Do
+        </h4>
     </div>
     <div class="container bodycontainer">
         <form>
             <div class="form-group input1">
-                <label for="formGroupExampleInput">To Do/Items</label>
+                <label for="formGroupExampleInput">
+                    To Do/Items
+                </label>
                 <input type="text" class="form-control" id="todo-input" placeholder="Sandles">
             </div>
-            <button class="btn btn-success mb-2" id="add-todo" type="submit">Submit</button>
+            <button class="btn btn-success mb-2" id="add-todo" type="submit">
+                Submit
+            </button>
     </div>
     </form>
+    <div class="container mt-5">
+        <div class="titles2 text-center mx-auto">
+            Below are some great tools to help you plan the best vacation ever!!
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="titles text-center mx-auto">
+            Find a Hotel!
+        </div>
+        <div class="hotel-map">
+
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="titles  text-center mx-auto">
+            Just some of the countless activities!!
+        </div>
+        <div class="activities-map">
+
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="titles  text-center mx-auto">
+            You KNOW your gonna get hungry there..
+        </div>
+        <div class="restaurants-map">
+
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="titles  text-center mx-auto">
+            Top 10 Things to DO!
+        </div>
+        <div class="activities-video" id="player">
+
+        </div>
+    </div>
+    <div class="container text-center mx-auto mt-5">
+        <a href="index.html#formarea" class="btn btn-danger">
+            Pick Another City
+        </a>
+        <a href="#top-element" class="btn btn-primary">
+            Back to Top
+        </a>
+    </div>
+
     <footer class="page-footer">
-        
         <div class="footer-copyright">
             <div class="container">
                 © 2014 Copyright Text
-                
             </div>
         </div>
     </footer>
-
-
 
     <script>
         $(document).ready(function () {
             $('.datepicker').datepicker({
                 Format: 'yyyy-mm-dd'
             });
-
-
         });
+
         // Or with jQuery
 
         $(document).ready(function () {
@@ -77,11 +129,7 @@
     </script>
 
 
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
     <script src="assets/javascript/app.js"></script>
