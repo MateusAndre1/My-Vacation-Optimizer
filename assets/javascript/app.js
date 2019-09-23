@@ -49,7 +49,7 @@ function weatherSearch(location){
                 var climate = "Hot";
             }
             else if(max<85 && max>=65){
-                var climate = "Warm";
+                var climate = "Mild";
             }
             else{
                 var climate = "Cold"
