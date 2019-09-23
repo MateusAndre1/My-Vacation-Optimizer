@@ -113,6 +113,11 @@ $("#formButton").on("click",function(event){
 
 })
 
+// $('.slider').slider({ 
+//     full_width: true,
+//     height : 1000, // default - height : 400
+//     interval: 6000 // default - interval: 6000
+// });
 
 //Create an on-click for the results. Save the value of the result clicked as a variable
 $(document).on("click", "#city-links", function(){

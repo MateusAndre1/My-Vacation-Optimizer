@@ -16,142 +16,152 @@
 </head>
 
 <body class="page1">
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="assets/imgs/image1.jpg"> <!-- random image -->
-                <div class="caption left-align">
-                    <h3>
-                        <span><i class="fas fa-globe-americas"></i></span>
-                        My Vacation Optimizer!
-                    </h3>
-                </div>
-            </li>
-            <li>
-                <img src="assets/imgs/snow.jfif"> <!-- random image -->
-                <div class="caption center-align">
-                    <h3>
-                        Where do you want to go?
-                    </h3>
-                </div>
-            </li>
-            <li>
-                <img src="assets/imgs/Whistler Homepage Photo Image Promotion 3.jpg"> <!-- random image -->
-                <div class="caption right-align">
-                    <h3>
-                        We've got the right guide for you!
-                    </h3>
-                </div>
-            </li>
-            <li>
-                <img src="assets/imgs/mild.webp"> <!-- random image -->
-                <div class="caption center-align">
-                    <h3>
-                        Dont forget to jot down your favorites!
-                    </h3>
-                </div>
-            </li>
-            <li>
-                <img src="assets/imgs/santa.jpg"> <!-- random image -->
-                <div class="caption left-align">
-                    <h3>
-                        Where are you gonna sleep?
-                    </h3>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="container" style="text-align: center">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem sed laboriosam reprehenderit
-            exercitationem porro laudantium, iure blanditiis possimus aut perspiciatis rerum sunt quos maiores. Nisi
-            praesentium quidem excepturi repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A ut
-            corrupti soluta expedita, quibusdam, officia at, recusandae amet laborum quod impedit. Quos ratione enim
-            necessitatibus nostrum sunt, ex amet exercitationem.
-        </p>
-        <div class="row">
-            <div class="col s3">
+    <header>
+        <div class="slider fullscreen">
+            <ul class="slides">
+                <a href="#formarea" class="btn waves-effect #29b6f6 light-blue lighten-1" id="startbtn">
+                    Start an Adventure!
+                </a>
+                <li>
+                    <img src="assets/imgs/image1.jpg"> <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>
+                            <span><i class="fas fa-globe-americas"></i></span>
+                            My Vacation Optimizer!
+                        </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/imgs/snow.jfif"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>
+                            Where do you want to go?
+                        </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/imgs/Whistler Homepage Photo Image Promotion 3.jpg"> <!-- random image -->
+                    <div class="caption right-align">
+                        <h3>
+                            We've got the right guide for you!
+                        </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/imgs/mild.webp"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>
+                            Dont forget to jot down your favorites!
+                        </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/imgs/santa.jpg"> <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>
+                            Where are you gonna sleep?
+                        </h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section id="empty-section">
+        <!-- empty spacer to move down from slider -->
+    </section>
+    <section id="formarea">
+        <div class="container" style="text-align: center">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quidem sed laboriosam reprehenderit
+                exercitationem porro laudantium, iure blanditiis possimus aut perspiciatis rerum sunt quos maiores. Nisi
+                praesentium quidem excepturi repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A ut
+                corrupti soluta expedita, quibusdam, officia at, recusandae amet laborum quod impedit. Quos ratione enim
+                necessitatibus nostrum sunt, ex amet exercitationem.
+            </p>
+            <div class="row">
+                <div class="col s3">
 
-            </div>
-            <form class="col s6">
-                <div class="row">
-                    <div class="input-field col s7">
-                        <!-- <textarea id="textarea1" class="materialize-textarea"></textarea> -->
-                        <input type="text" class="datepicker" id="start-date">
-                        <label for="textarea1">
-                            Vacation Start Date: (YYYY/MM/DD)
+                </div>
+                <form class="col s6">
+                    <div class="row">
+                        <div class="input-field col s7">
+                            <!-- <textarea id="textarea1" class="materialize-textarea"></textarea> -->
+                            <input type="text" class="datepicker" id="start-date">
+                            <label for="textarea1">
+                                Vacation Start Date: (YYYY/MM/DD)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-field col s10">
+                        <select id="weatherSelect">
+                            <option value="" disabled selected>
+                                Weather Conditions
+                            </option>
+                            <option value="Hot">
+                                Hot
+                            </option>
+                            <option value="Mild">
+                                Mild
+                            </option>
+                            <option value="Cold">
+                                Cold
+                            </option>
+                        </select>
+                        <label>
+                            Weather
                         </label>
                     </div>
-                </div>
-                <div class="input-field col s10">
-                    <select id="weatherSelect">
-                        <option value="" disabled selected>
-                            Weather Conditions
-                        </option>
-                        <option value="Hot">
-                            Hot
-                        </option>
-                        <option value="Mild">
-                            Mild
-                        </option>
-                        <option value="Cold">
-                            Cold
-                        </option>
-                    </select>
-                    <label>
-                        Weather
-                    </label>
-                </div>
-                <div class="input-field col s10">
-                    <select id="region-select">
-                        <option value="" disabled selected>
-                            Location/Country
-                        </option>
-                        <option value="1">
-                            United States East Coast
-                        </option>
-                        <option value="2">
-                            United States West Coast
-                        </option>
-                        <option value="3">
-                            Canada
-                        </option>
-                        <option value="4">
-                            Mexico
-                        </option>
-                        <option value="5">
-                            Spain
-                        </option>
-                        <option value="6">
-                            France
-                        </option>
-                    </select>
-                    <label>
-                        Destination
-                    </label>
-                </div>
-                <button class="btn waves-effect #29b6f6 light-blue lighten-1" type="button" name="action"
-                    id="formButton">
-                    Submit
-                    <i class="fas fa-check"></i>
-                </button>
-            </form>
-            <div class="col s3">
+                    <div class="input-field col s10">
+                        <select id="region-select">
+                            <option value="" disabled selected>
+                                Location/Country
+                            </option>
+                            <option value="1">
+                                United States East Coast
+                            </option>
+                            <option value="2">
+                                United States West Coast
+                            </option>
+                            <option value="3">
+                                Canada
+                            </option>
+                            <option value="4">
+                                Mexico
+                            </option>
+                            <option value="5">
+                                Spain
+                            </option>
+                            <option value="6">
+                                France
+                            </option>
+                        </select>
+                        <label>
+                            Destination
+                        </label>
+                    </div>
+                    <button class="btn waves-effect #29b6f6 light-blue lighten-1" type="button" name="action"
+                        id="formButton">
+                        Submit
+                        <i class="fas fa-check"></i>
+                    </button>
+                </form>
+                <div class="col s3">
 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+
+                </div>
+                <div id="city-results" class="col s4">
+
+                </div>
+                <div class="col s4">
+
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col s4">
-
-            </div>
-            <div id="city-results" class="col s4">
-
-            </div>
-            <div class="col s4">
-
-            </div>
-        </div>
-    </div>
+    </section>
 
     <footer class="page-footer">
         <div class="footer-copyright">
@@ -167,7 +177,7 @@
                 Format: 'yyyy-mm-dd'
             });
         });
-        
+
         $(document).ready(function () {
             $('.slider').slider();
         });

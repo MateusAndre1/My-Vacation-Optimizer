@@ -1,24 +1,34 @@
+html {
+    scroll-behavior: smooth;
+}
 .datepicker-date-display {
     background-color: #29b6f6;
 }
 .datepicker-table td.is-selected{
     background-color: #29b6f6;
 }
+#startbtn {
+    font-size: 18px;
+    position: absolute;
+    z-index: 10;
+    height: 45px;
+    width: 300px;
+    margin-left: 40%;
+    margin-top: 70vh;
 
+}
+#empty-section {
+    height: 140vh;
+}
+#formarea {
+    margin-bottom: 40vh;
+}
 
 .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done{
     background-color: #29b6f6;
     color: white;
     margin: 2px;
 
-}
-.nav-wrapper {
-    background-image: url(../imgs/banner.jpg);
-    min-height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    background-attachment: fixed;
 }
 .is-today{
     color: #29b6f6;
