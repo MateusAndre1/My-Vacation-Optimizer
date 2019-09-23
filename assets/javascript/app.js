@@ -51,11 +51,8 @@ function weatherSearch(location){
             else if(max<85 && max>=65){
                 var climate = "Warm";
             }
-            else if(max<65 && max>45){
-                var climate = "Cool"
-            }
             else{
-                var climate = "Cold";
+                var climate = "Cold"
             }
             //This is where we append the cities
             if(climate==$("#weatherSelect").val()){
