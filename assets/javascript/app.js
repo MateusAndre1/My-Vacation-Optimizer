@@ -46,19 +46,19 @@ function weatherSearch(location){
             let a = response.daily.data[0]
             console.log(location)
             let max = a.apparentTemperatureMax
-            console.log(max)
+            // console.log(max)
             //These are the conditionals based on what weather the user selects
             if(max>=85){
                 var climate = "Hot";
             }
-            else if(max<85 && max>=60){
+            else if(max<85 && 65<=max){
                 var climate = "Mild";
             }
             else{
                 var climate = "Cold"
             }
             //This is where we append the cities
-            if(climate==$("#weatherSelect").val()){
+            if(climate===$("#weatherSelect").val()){
 
                 let a = $("<a>")
                 let p = $("<p>")
@@ -68,7 +68,7 @@ function weatherSearch(location){
                 a.text(location)
                 p.append(a)
                 $("#city-results").append(p)
-
+                console.log(location, max)
             }
             
         })
@@ -114,7 +114,9 @@ $("#formButton").on("click",function(event){
             weatherSearch(destinations.France[i])
         }
     }    
-
+    console.log("-------------------");
+    console.log("region selected: ", regionSelect);
+    console.log("-------------------");
 })
 
 // $('.slider').slider({ 
