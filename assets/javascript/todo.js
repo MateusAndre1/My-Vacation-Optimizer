@@ -37,13 +37,24 @@ $(document).ready(function () {
         let listName = snapshot.val().dbtodo;
 
         let tr = $("<tr>");
-
-        tr.append("<td>" + listName + "</td>"
-    )
+        tr.append("<span><i class='far fa-trash-alt'></i>  ")
+;
+        tr.append(listName)
 
     $("#displayboard").append(tr)
 
     });
+});
+
+$('tbody').on("click", "span", function (e) {
+    $(this).parent().fadeOut( function () {
+        $(this).remove();
+    });
+    e.stopPropagation();
+});
+$("tbody").on("click", "tr", function () {
+    $(this).toggleClass("completed")
+});
     
     // global variables for everything below
     
@@ -175,3 +186,4 @@ $(document).ready(function () {
     }
     calls();
 });
+
