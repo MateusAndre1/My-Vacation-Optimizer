@@ -2,12 +2,14 @@ $(document).ready(function(){
 
 //Arrays within an object that will allow the progrma to search in the selected region
 var destinations = {
-    usEast: ["New York City, New York", "Orlando, Florida", "Miami, Florida", "Boston, Massachusetts"],
-    usWest: ["Los Angeles, California", "Las Vegas, Nevada", "San Francisco, California", "Seattle, Washington", "Portland, Oregon"],
+    usEast: ["New York City, New York", "Orlando, Florida", "Miami, Florida", "Boston, Massachusetts", "Atlanta, Georgia", "Asheville, North Carolina"],
+    usWest: ["Los Angeles, California", "San Diego, California", "Las Vegas, Nevada", "San Francisco, California", "Seattle, Washington", "Portland, Oregon"],
     Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler, Canada"],
-    Mexico: ["Mexico City, Mexico", "Tijuana, Mexico"],
-    France: ["Paris, France"],
-    Spain: ["Madrid", "Barcelona"]
+    Mexico: ["Mexico City, Mexico", "Tijuana, Mexico", "Costa Maya, Mexico"],
+    Europe: ["Paris, France", "Normandy, France", "Madrid, Spain", "Barcelona, Spain"],
+    Asia: [],
+    southAmerica: [],
+    Carribean: []
 }
 
 //This function searches the city inputed and determines if the city meets the weather specifications
@@ -27,6 +29,7 @@ function weatherSearch(location){
     $.ajax(settings).then(function (result) {
         //This is my algorithm to get the start date
         var startDate = $("#start-date").val();
+        console.log(startDate)
         var splitDate = startDate.split(" ");
         splitDate[2] = 2018;
         var unixDate = moment(splitDate.join(" "), "MMM-DD-YYYY").unix();
@@ -105,15 +108,25 @@ $("#formButton").on("click",function(event){
         }
     }
     else if(regionSelect==5){
-        for(i=0; i<destinations.Spain.length; i++){
-            weatherSearch(destinations.Spain[i])
+        for(i=0; i<destinations.Europe.length; i++){
+            weatherSearch(destinations.Europe[i])
         }
-    }
+    } 
     else if(regionSelect==6){
-        for(i=0; i<destinations.France.length; i++){
-            weatherSearch(destinations.France[i])
+        for(i=0; i<destinations.Asia.length; i++){
+            weatherSearch(destinations.Asia[i])
         }
-    }    
+    } 
+    else if(regionSelect==7){
+        for(i=0; i<destinations.southAmerica.length; i++){
+            weatherSearch(destinations.southAmerica[i])
+        }
+    } 
+    else if(regionSelect==8){
+        for(i=0; i<destinations.Carribean.length; i++){
+            weatherSearch(destinations.Carribean[i])
+        }
+    } 
     console.log("-------------------");
     console.log("region selected: ", regionSelect);
     console.log("-------------------");
