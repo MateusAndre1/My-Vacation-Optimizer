@@ -32,7 +32,7 @@ function weatherSearch(location){
         var unixDate = moment(splitDate.join(" "), "MMM-DD-YYYY").unix();
         console.log(unixDate)
         //This is what I'm searching
-	    var key = "4f8a13d4f8a423a049c97f0ad49fcb8b";
+	    var key = "f2046f08661ee263fb5abbd00810b72e";
         var lat = result.Results[0].lat;
         var long = result.Results[0].lon;
         console.log(unixDate)
@@ -65,7 +65,7 @@ function weatherSearch(location){
                 a.attr("href", "index2.html")
                 a.attr("value", location)
                 a.attr("id", "city-links")
-                a.text(location)
+                a.text(location + "    Max Temp: " + max)
                 p.append(a)
                 $("#city-results").append(p)
                 console.log(location, max)
