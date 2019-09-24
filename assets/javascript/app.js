@@ -6,7 +6,7 @@ var destinations = {
     usWest: ["Los Angeles, California", "San Diego, California", "Las Vegas, Nevada", "San Francisco, California", "Seattle, Washington", "Portland, Oregon"],
     Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler, Canada"],
     Mexico: ["Mexico City, Mexico", "Tijuana, Mexico", "Costa Maya, Mexico"],
-    Europe: ["Paris, France", "Normandy, France", "Madrid, Spain", "Barcelona, Spain"],
+    Europe: ["Paris, France", "Madrid, Spain", "Barcelona, Spain", "Berlin, Germany", "Dublin, Ireland", "London, UK", "Rome, Italy"],
     Asia: [],
     southAmerica: [],
     Carribean: []
