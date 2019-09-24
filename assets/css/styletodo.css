@@ -95,3 +95,7 @@ tr {
     background-color: rgba(29, 140, 214, 0.883);
     border-radius: .5em;
 }
+
+.thheader {
+    font-weight: bolder;
+}
