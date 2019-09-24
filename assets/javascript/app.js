@@ -9,7 +9,7 @@ var destinations = {
     Europe: ["Paris, France", "Normandy, France", "Madrid, Spain", "Barcelona, Spain"],
     Asia: [],
     southAmerica: [],
-    Carribean: ["Montego Bay, Jamaica", "Ocho Rios, Jamaica", "Nassau, Bahamas", "Havana, Cuba", "Cayman Islands", ""]
+    Carribean: ["Montego Bay, Jamaica", "Ocho Rios, Jamaica", "Nassau, Bahamas", "Havana, Cuba", "Cayman Islands" ]
 }
 
 //This function searches the city inputed and determines if the city meets the weather specifications
