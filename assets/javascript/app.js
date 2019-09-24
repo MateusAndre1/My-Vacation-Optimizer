@@ -8,7 +8,7 @@ var destinations = {
     Mexico: ["Mexico City, Mexico", "Tijuana, Mexico", "Costa Maya, Mexico"],
     Europe: ["Paris, France", "Normandy, France", "Madrid, Spain", "Barcelona, Spain"],
     Asia: [],
-    southAmerica: [],
+    southAmerica: ["Rio de Janeiro, Brazil", "Sao Paulo, Brazil", "Brasilia, Brazil", "Foz do Iguacu, Brazil"],
     Carribean: []
 }
 
