@@ -7,7 +7,7 @@ var destinations = {
     Canada: ["Vancouver", "Ottowa", "Toronto", "Whistler, Canada"],
     Mexico: ["Mexico City, Mexico", "Tijuana, Mexico", "Costa Maya, Mexico"],
     Europe: ["Paris, France", "Normandy, France", "Madrid, Spain", "Barcelona, Spain"],
-    Asia: [],
+    Asia: ["Tokyo, Japan", "Beijing, China", "Seoul, Korea"],
     southAmerica: [],
     Carribean: ["Montego Bay, Jamaica", "Ocho Rios, Jamaica", "Nassau, Bahamas", "Havana, Cuba", "Cayman Islands", ""]
 }
@@ -33,12 +33,12 @@ function weatherSearch(location){
         var splitDate = startDate.split(" ");
         splitDate[2] = 2018;
         var unixDate = moment(splitDate.join(" "), "MMM-DD-YYYY").unix();
-        console.log(unixDate)
+        
         //This is what I'm searching
 	    var key = "f2046f08661ee263fb5abbd00810b72e";
         var lat = result.Results[0].lat;
         var long = result.Results[0].lon;
-        console.log(unixDate)
+       
         //var queryUrl = "https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+unixDate+"?exclude=currently,flags";
         var queryUrl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+key+"/"+lat+","+long+","+unixDate+"?exclude=currently,flags";
         //This ajax call searches for the weather of the selected city
