@@ -1,8 +1,20 @@
 # My Vacation Optimizer
 
+
+
 ### Imagine being able to plan out your next vacation or adventure all in one place, no travel agent needed. Now you can! With My Vacation Optimizer!
 
+
+
 ### With My Vacation Optimizer you will be able to first (and most importantly) find out if the weather will be to your liking. From there you can take a small tour through a video of the location, or call one of the local tour guides for questions. Finally you can plan out the entire vacation right on our app!
+
+
+
+### **Team Members**
+### *Mike Praplaski - Front End
+### *Carl Robinson Jr - Front End
+### *Max Bloom - Back End / Weather API
+### *Andre Roque Lead/Back End/ Google Maps API and Youtube API
 
 ## With **Mike** and **Carl** on the front end, and **Andre** and **Max** on the back end we were easly able to make the app not only spectaculary well, but also function without issues!
 
