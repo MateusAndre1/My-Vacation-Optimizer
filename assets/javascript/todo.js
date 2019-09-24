@@ -48,19 +48,19 @@ $(document).ready(function () {
         $(this).toggleClass("completed")
     });
 
-    var firebaseConfig2 = {
-        apiKey: "AIzaSyC7oATcoeWWLlLIyjT11WEOTEmDFkZKogk",
-        authDomain: "my-vacation-optimizer-2.firebaseapp.com",
-        databaseURL: "https://my-vacation-optimizer-2.firebaseio.com",
-        projectId: "my-vacation-optimizer-2",
-        storageBucket: "",
-        messagingSenderId: "252046134907",
-        appId: "1:252046134907:web:f7b5c5308cb57822c95cde"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig2);
+    // var firebaseConfig2 = {
+    //     apiKey: "AIzaSyC7oATcoeWWLlLIyjT11WEOTEmDFkZKogk",
+    //     authDomain: "my-vacation-optimizer-2.firebaseapp.com",
+    //     databaseURL: "https://my-vacation-optimizer-2.firebaseio.com",
+    //     projectId: "my-vacation-optimizer-2",
+    //     storageBucket: "",
+    //     messagingSenderId: "252046134907",
+    //     appId: "1:252046134907:web:f7b5c5308cb57822c95cde"
+    //   };
+    //   // Initialize Firebase
+    //   firebase.initializeApp(firebaseConfig2);
 
-      var database2 = firebase.database();
+    //   var database2 = firebase.database();
 
 
     let day1;
@@ -77,7 +77,7 @@ $(document).ready(function () {
         day4 = $("#day4-input").val().trim();
         day5 = $("#day5-input").val().trim();
 
-        database2.ref().push({
+        database.ref().push({
             dbday1: day1,
             dbday2: day2,
             dbday3: day3,
@@ -94,7 +94,7 @@ $(document).ready(function () {
 
     });
 
-    database2.ref().on("child_added", function (snapshot) {
+    database.ref().on("child_added", function (snapshot) {
         let fday = snapshot.val().dbday1;
         let sday = snapshot.val().dbday2;
         let tday = snapshot.val().dbday3;
